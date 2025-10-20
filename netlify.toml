@@ -1,0 +1,12 @@
+# netlify.toml
+[build]
+  # Directory where your production-ready files are located
+  publish = "dist"
+  # The command to build your site
+  command = "npm run build"
+
+# Redirect all routes to index.html for SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
