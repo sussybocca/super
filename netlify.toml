@@ -1,12 +1,19 @@
 # netlify.toml
-[build]
-  # Directory where your production-ready files are located
-  publish = "dist"
-  # The command to build your site
-  command = "npm run build"
 
-# Redirect all routes to index.html for SPA routing
+[build]
+  # Production build command
+  command = "npm run build"
+  # Folder to publish after build
+  publish = "dist"
+
+# SPA redirect: ensures all frontend routes go to index.html
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Optional: for local Netlify Dev preview
+[dev]
+  command = "npm run preview"
+  port = 4173         # default Vite preview port
+  publish = "dist"
