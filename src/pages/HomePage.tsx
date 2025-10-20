@@ -1,5 +1,5 @@
 // src/pages/HomePage.tsx
-import VideoGrid from "../components/video/VideoGrid";
+import VideoGrid from "../components/Video/VideoGrid";
 
 const dummyVideos = Array.from({ length: 12 }).map((_, i) => ({
   id: `vid-${i}`,
